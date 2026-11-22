@@ -1,0 +1,7 @@
+FROM python:3.13-windowsservercore-ltsc2022
+
+WORKDIR C:/app
+COPY Queen_of_Hearts_Dashboard_Image_Frames_2_1.html C:/app/index.html
+
+EXPOSE 8000
+CMD ["python", "-m", "http.server", "8000", "--bind", "0.0.0.0", "--directory", "C:/app"]

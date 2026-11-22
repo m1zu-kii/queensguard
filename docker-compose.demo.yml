@@ -1,0 +1,10 @@
+services:
+  dashboard-demo:
+    build:
+      context: .
+      dockerfile: Dockerfile.demo
+    image: queensguard-dashboard-demo:local
+    isolation: hyperv
+    ports:
+      - "127.0.0.1:8080:8000"
+    restart: "no"
